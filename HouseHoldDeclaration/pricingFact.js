@@ -7,7 +7,7 @@ module.exports = function (data) {
     let header = [];
 
     //To be fixed, populate dxb account number here, empty string for now
-    let accountNumber = '                 ';
+    let accountNumber = 'XXXXXXXX';
 
     header.push(
       [{ }, { image : dxbLogo, width : 250, height : 100}]
@@ -15,8 +15,8 @@ module.exports = function (data) {
 
     let creditRow = [];
 
-    creditRow.push(
-        [{text : `Credit to JLG/Br. ${branch}`}, { text : `/DLXB${accountNumber}/2023-2024`}, { text : `Date: ${date}`}]
+    creditRow.push(                                         
+        [{text : `Credit to JLG/Br.    ${branch}`}, { text : `/FED${accountNumber}/2020-2021`}, { text : `Date: ${date}`}]
     )
 
     let pricingFactTable = [];
@@ -24,23 +24,23 @@ module.exports = function (data) {
     pricingFactTable.push(
 
         [{ text: 'Parameter', }, { text : 'Details'}, { text : 'Unit'}],
-        [{ text: 'Loan amount (amount disbursed to the borrower)', }, { text : ''}, { text : 'Rs.40000'}],
-        [{ text: 'Total interest to be paid by borrower', }, { text : ''}, { text : 'Rs.11720'}],
-        [{ text: 'Loan Interest rate', }, { text : '26'}, { text : 'Percentage'}],
+        [{ text: 'Loan amount (amount disbursed to the borrower)', }, { text : ''}, { text : 'Rs.'}],
+        [{ text: 'Total interest to be paid by borrower', }, { text : ''}, { text : 'Rs.'}],
+        [{ text: 'Loan Interest rate', }, { text : ''}, { text : 'Percentage'}],
         [{ text: 'Loan schedule starting date', }, { text : ''}, { text : ''}],
-        [{ text: 'Loan tenure', }, { text : '24'}, { text : 'Months'}],
+        [{ text: 'Loan tenure', }, { text : ''}, { text : 'Months'}],
         [{ text: 'Effective annualized interest rate (computed on net disbursed amount using IRR approach and reducing balance method)', }, { text : ''}, { text : 'Percentage'}],
         [{ text: 'Repayment frequency by the borrower' }, { text : 'Monthly'}, { text : ''}],
-        [{ text: 'Amount of Instalment to be repaid'}, { text : ''}, { text : 'Rs.2155'}],
-        [{ text: 'Number of instalments of repayment'}, { text : '24'}, { text : 'Months'}],
-        [{ text: 'Other up-front charges (break-up of each component to be given below) (inRupees)' , bold : true}, { text : ''}, { text : ''}],
-        [{ text: 'Processing fees', }, { text : ''}, { text : 'Rs.400'}],
-        [{ text: 'Insurance charges-Double coverage*'}, { text : ''}, { text : 'Rs.1471.86'}],
-        [{ text: 'Insurance charges-Single coverage*'}, { text : ''}, { text : ''}],
-        [{ text: 'Applicable Tax (GST 18%)'}, { text : ''}, { text : 'Rs.72'}],
+        [{ text: 'Amount of Instalment to be repaid'}, { text : ''}, { text : 'Rs.'}],
+        [{ text: 'Number of instalments of repayment'}, { text : ''}, { text : 'Months'}],
+        [{ text: 'Other up-front charges (break-up of each component to be given below) (inRupees)' , bold : true, italics: true,}, { text : ''}, { text : ''}],
+        [{ text: 'Processing fees', }, { text : ''}, { text : 'Rs.'}],
+        [{ text: 'Insurance charges-Double coverage*'}, { text : ''}, { text : 'Rs.'}],
+        [{ text: 'Insurance charges-Single coverage*'}, { text : ''}, { text : 'Rs.'}],
+        [{ text: 'Applicable Tax (GST 18%)'}, { text : ''}, { text : 'Rs.'}],
         [{ text: 'Broken period interest'}, { text : ''}, { text : 'Rs.'}],
-        [{ text: 'Net disbursed amount (In case double Insurance offered)'}, { text : ''}, { text : 'Rs.38056.14'}],
-        [{ text: 'Net disbursed amount (In case single Insurance offered)'}, { text : ''}, { text : ''}],
+        [{ text: 'Net disbursed amount (In case double Insurance offered)'}, { text : ''}, { text : 'Rs.'}],
+        [{ text: 'Net disbursed amount (In case single Insurance offered)'}, { text : ''}, { text : 'Rs.'}],
         
     )
 
@@ -71,6 +71,5 @@ module.exports = function (data) {
             }, style: 'tableLeftAligned',
             bold: true
         },
-        { text : 'Note: Broken period interest varies daywise and hence cannot give exact calculation', alignment : 'center', style : 'paragraph'}
     ]
 }
