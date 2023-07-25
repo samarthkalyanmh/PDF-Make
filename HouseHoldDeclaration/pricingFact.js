@@ -54,7 +54,7 @@ module.exports = function (data) {
             }, style : 'dxbLogoHeader',
             layout : 'noBorders'
         },
-        { text : 'Regd. Office: Thrissur, Kerala', style : 'heading', alignment : 'left'},
+        { text : 'Regd. Office: Chitradurga, Karnataka', style : 'heading', alignment : 'left'},
         {
             table: {
               widths: ['33%', '33%' , '*'],
